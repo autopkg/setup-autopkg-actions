@@ -1,4 +1,5 @@
 name: "setup-autopkg-actions"
+author: JGStew
 description: "Sets up autopkg"
 inputs:
   name:
@@ -17,6 +18,11 @@ inputs:
     required: true
     # only needed on self hosted windows runners, but no harm otherwise:
     default: "true"
+branding:
+  # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#exhaustive-list-of-all-currently-supported-icons
+  icon: 'command'
+  # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#brandingcolor
+  color: 'gray-dark'
 
 runs:
   using: "composite"
