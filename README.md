@@ -27,3 +27,16 @@ Example action: https://github.com/jgstew/jgstew-recipes/blob/main/.github/workf
 ```
 
 Example action: https://github.com/jgstew/jgstew-recipes/blob/main/.github/workflows/Test_setup-autopkg-actions_full.yaml
+
+## Usage:
+
+After the github action step which sets up AutoPkg, you can invoke it like the following: (Cross Platform)
+
+```
+      - name: run recipe autopkg
+        run: python autopkg/Code/autopkg run -vv Test-Recipes/AutopkgCore.test.recipe.yaml
+```
+
+The AutoPkg repo will actually be cloned into the `./autopkg` folder relative to the current working directory and on the branch specified.
+
+This means that you need to invoke autopkg itself by using `python autopkg/Code/autopkg command` where "command" is whatever command you wish to run. Using POSIX paths to invoke autopkg will work on all platforms including Windows.
