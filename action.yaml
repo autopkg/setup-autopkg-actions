@@ -1,5 +1,6 @@
 name: "setup-autopkg-actions"
-author: JGStew
+# See: https://github.com/autopkg/setup-autopkg-actions/graphs/contributors
+author: AutoPkg
 description: "Sets up autopkg"
 inputs:
   name:
