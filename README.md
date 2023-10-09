@@ -20,7 +20,8 @@ Example action: https://github.com/jgstew/jgstew-recipes/blob/main/.github/workf
 ```
       - name: setup-autopkg-actions step
         uses: autopkg/setup-autopkg-actions@v0.1.1
-        use-python-version: "3.11"
-        use-autopkg-branch: dev
-        set-powershell-policy: false
+        with:
+          use-python-version: "3.11"
+          use-autopkg-branch: dev
+          set-powershell-policy: false
 ```
