@@ -45,7 +45,7 @@ runs:
           requirements.txt
 
     - name: Install/Update Python Build Tools
-      run: pip install setuptools wheel build
+      run: pip install --upgrade setuptools wheel build
       shell: bash
 
     - name: Install AutoPkg Reqirements

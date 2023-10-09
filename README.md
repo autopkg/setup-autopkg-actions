@@ -25,3 +25,5 @@ Example action: https://github.com/jgstew/jgstew-recipes/blob/main/.github/workf
           use-autopkg-branch: dev
           set-powershell-policy: false
 ```
+
+Example action: https://github.com/jgstew/jgstew-recipes/blob/main/.github/workflows/Test_setup-autopkg-actions_full.yaml
