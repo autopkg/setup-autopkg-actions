@@ -1,8 +1,8 @@
 # setup-autopkg-actions
 
-This is a shared github action for setting up AutoPkg to use within GitHub actions.
+This is a shared github action for setting up [AutoPkg](https://github.com/autopkg/autopkg) to use within GitHub actions.
 
-This allows a single place to keep the config required for getting AutoPkg running on MacOS / Windows / Linux runners, including self hosted runners.
+This allows a single place to keep the config required for getting [AutoPkg](https://github.com/autopkg/autopkg) running on MacOS / Windows / Linux runners, including self hosted runners.
 
 ## Simple Example:
 
@@ -30,7 +30,7 @@ Example action: https://github.com/jgstew/jgstew-recipes/blob/main/.github/workf
 
 ## Usage:
 
-After the github action step which sets up AutoPkg, you can invoke it like the following: (Cross Platform)
+After the github action step which sets up [AutoPkg](https://github.com/autopkg/autopkg), you can invoke it like the following: (Cross Platform)
 
 ```
       - name: run recipe autopkg
