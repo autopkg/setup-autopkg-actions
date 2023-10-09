@@ -58,6 +58,7 @@ runs:
       shell: cmd
       run: |
         if not exist "%USERPROFILE%/AppData/Local/Autopkg" mkdir "%USERPROFILE%/AppData/Local/Autopkg"
+        if not exist "%USERPROFILE%/Library/AutoPkg" mkdir "%USERPROFILE%/Library/AutoPkg"
         if not exist "%USERPROFILE%/AppData/Local/Autopkg/config.json" echo {} > "%USERPROFILE%/AppData/Local/Autopkg/config.json"
 
     - name: create default autopkg config file Linux
@@ -65,4 +66,11 @@ runs:
       shell: bash
       run: |
         cd ~ && mkdir -p .config/Autopkg
+        cd ~ && mkdir -p Library/AutoPkg
         cd ~ && echo {} > .config/Autopkg/config.json
+
+    - name: create folder for recipe map - macOS
+      if: runner.os == 'macOS'
+      shell: bash
+      run: |
+        cd ~ && mkdir -p Library/AutoPkg
