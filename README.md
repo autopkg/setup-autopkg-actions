@@ -8,10 +8,10 @@ This allows a single place to keep the config required for getting AutoPkg runni
 
 ```
       - name: setup-autopkg-actions step
-        uses: autopkg/setup-autopkg-actions@v0.1.1
+        uses: autopkg/setup-autopkg-actions@v0.1.2
 ```
 
-`v0.1.1` should be set to the newest release version of this repo when creating a new action.
+`v0.1.2` should be set to the newest release version of this repo when creating a new action.
 
 Example action: https://github.com/jgstew/jgstew-recipes/blob/main/.github/workflows/Test_setup-autopkg-actions.yaml
 
@@ -19,7 +19,7 @@ Example action: https://github.com/jgstew/jgstew-recipes/blob/main/.github/workf
 
 ```
       - name: setup-autopkg-actions step
-        uses: autopkg/setup-autopkg-actions@v0.1.1
+        uses: autopkg/setup-autopkg-actions@v0.1.2
         with:
           use-python-version: "3.11"
           use-autopkg-branch: dev
