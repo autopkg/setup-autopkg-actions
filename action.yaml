@@ -35,14 +35,14 @@ runs:
       run: powershell -command "Set-ExecutionPolicy -Force -ExecutionPolicy RemoteSigned -Scope CurrentUser"
 
     - name: checkout autopkg
-      uses: actions/checkout@v3
+      uses: actions/checkout@v5
       with:
         repository: autopkg/autopkg
         path: autopkg
         ref: ${{ inputs.use-autopkg-branch }}
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v6
       with:
         python-version: ${{ inputs.use-python-version }}
         cache: "pip"
@@ -52,7 +52,7 @@ runs:
           requirements.txt
 
     - name: Install/Update Python Build Tools
-      run: pip install --upgrade setuptools wheel build
+      run: python -m pip install --upgrade pip setuptools wheel build
       shell: bash
 
     - name: Install AutoPkg Reqirements
