@@ -48,7 +48,7 @@ runs:
         cache: "pip"
         # following should be any requirements files used later:
         cache-dependency-path: |
-          autopkg/gh_actions_requirements.txt
+          autopkg/requirements.txt
           requirements.txt
 
     - name: Install/Update Python Build Tools
@@ -56,7 +56,7 @@ runs:
       shell: bash
 
     - name: Install AutoPkg Reqirements
-      run: pip install --requirement autopkg/gh_actions_requirements.txt
+      run: pip install --requirement autopkg/requirements.txt
       shell: bash
 
     - name: create empty config windows
