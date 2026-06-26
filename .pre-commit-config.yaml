@@ -6,7 +6,7 @@
 # update all checks to latest:      pre-commit autoupdate
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v6.0.0
     hooks:
       - id: check-yaml
       - id: check-added-large-files
@@ -25,7 +25,7 @@ repos:
   #     - id: yamllint
   #       args: [-c=.yamllint.yaml]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.26.3
+    rev: 0.37.3
     hooks:
       # - id: check-dependabot
       - id: check-github-actions
