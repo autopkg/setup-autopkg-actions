@@ -55,10 +55,6 @@ runs:
       run: python -m pip install --upgrade pip setuptools wheel build
       shell: bash
 
-    - name: Install/Update Python LXML
-      run: python -m pip install lxml
-      shell: bash
-
     - name: Install AutoPkg Reqirements
       run: pip install --requirement autopkg/requirements.txt
       shell: bash
