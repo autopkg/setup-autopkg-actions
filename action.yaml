@@ -43,8 +43,8 @@ runs:
 
     - name: Fix requirements.txt for windows runners
       if: runner.os == 'Windows'
-      # replace lxml==6.1.0 with lxml==6.1.1 due to build failures on windows runners with lxml==6.1.0
-      run: sed -i 's/lxml==6.1.0/lxml==6.1.1/g' autopkg/requirements.txt
+      # remove `--no-binary :all:` from requirements.txt, as it causes issues on windows runners
+      run: sed -i 's/--no-binary :all://g' autopkg/requirements.txt
       shell: bash
 
     - name: Set up Python
