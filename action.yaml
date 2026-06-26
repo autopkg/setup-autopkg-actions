@@ -19,6 +19,10 @@ inputs:
     required: true
     # only needed on self hosted windows runners, but no harm otherwise:
     default: "true"
+  remove-no-binary:
+    description: "Should this remove the --no-binary :all: from requirements.txt"
+    required: true
+    default: "true"
 branding:
   # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#exhaustive-list-of-all-currently-supported-icons
   icon: 'command'
@@ -41,9 +45,9 @@ runs:
         path: autopkg
         ref: ${{ inputs.use-autopkg-branch }}
 
-    - name: Fix requirements.txt for windows runners
-      if: runner.os == 'Windows'
-      # remove `--no-binary :all:` from requirements.txt, as it causes issues on windows runners
+    - name: remove `--no-binary :all:` from requirements.txt if inputs.remove-no-binary
+      if: inputs.remove-no-binary == 'true'
+      # remove `--no-binary :all:` from requirements.txt, as it causes issues on runners
       run: sed -i 's/--no-binary :all://g' autopkg/requirements.txt
       shell: bash
 
