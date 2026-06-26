@@ -46,7 +46,7 @@ runs:
         ref: ${{ inputs.use-autopkg-branch }}
 
     - name: remove `--no-binary :all:` from requirements.txt if inputs.remove-no-binary
-      if: inputs.remove-no-binary == 'true'
+      if: inputs.remove-no-binary == 'true' && runner.os != 'macOS'
       # remove `--no-binary :all:` from requirements.txt, as it causes issues on runners
       run: sed -i 's/--no-binary :all://g' autopkg/requirements.txt
       shell: bash
